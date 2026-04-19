@@ -1,95 +1,187 @@
-
 <html>
 <head>
-    <title>Land / Plot</title>
+<title>Land / Plot</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(to right, lavender, ghostwhite);
+}
+
+.header{
+background:linear-gradient(to right, mediumpurple, slateblue);
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.title{
+text-align:center;
+color:purple;
+margin-top:20px;
+}
+
+.subtitle{
+text-align:center;
+color:gray;
+margin-bottom:20px;
+}
+
+.property-table{
+margin:auto;
+border-spacing:20px;
+}
+
+.property-table td{
+background:white;
+border-radius:10px;
+padding:12px;
+text-align:center;
+box-shadow:0 4px 12px gray;
+transition:0.3s;
+}
+
+.property-table td:hover{
+transform:scale(1.05);
+}
+
+.property-table img{
+width:240px;
+height:200px;
+border-radius:10px;
+}
+
+button{
+padding:8px 15px;
+border:none;
+border-radius:8px;
+background:mediumpurple;
+color:white;
+cursor:pointer;
+margin-top:8px;
+}
+
+button:hover{
+background:slateblue;
+}
+
+.footer{
+background:lavenderblush;
+margin:20px;
+padding:20px;
+text-align:center;
+}
+
+a{
+text-decoration:none;
+color:purple;
+font-weight:bold;
+}
+
+</style>
 </head>
 
-<body style="background-color:whitesmoke; margin:0; font-family:Arial;">
+<body>
 
-<div style="background-color:#6f42c1; color:white; padding:15px; text-align:center;">
-    <h2>🏙️ Skyline Properties</h2>
+<div class="header">
+<h2><i class="fa-solid fa-city"></i> Skyline Properties</h2>
+<p>Find the Best Investment Plots</p>
 </div>
 
-<center>
-    <h2 style="color:#6f42c1;">Land & Plots</h2>
-    <p style="color:gray;">Best investment options</p>
-</center>
+<h2 class="title">Land & Plots</h2>
+<p class="subtitle">Best investment options for you</p>
 
-<table align="center" cellpadding="20">
+<table class="property-table">
 
 <tr>
-<td align="center" style="border:1px solid #ccc; padding:15px;">
-<img src="p1.jpg" width="250" height="250"><br><br>
+
+<td>
+<img src="p1.jpg"><br><br>
 <b>Residential Plot</b><br>
-💰 ₹50L<br>
-📏2500 sq.ft <br>
-📍 Nagpur<br><br>
- 
+<i class="fa-solid fa-ruler-combined"></i> 2500 sq.ft<br>
+<i class="fa-solid fa-location-dot"></i> Nagpur<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹50L<br>
 <button>View Details</button>
 </td>
 
-<td align="center" style="border:1px solid #ccc; padding:15px;">
-<img src="p2.jpg" width="250" height="250"><br>
+<td>
+<img src="p2.jpg"><br><br>
 <b>Commercial Plot</b><br>
-💰 ₹74L<br>
-📏 2 Acres<br>
-📍 Pune<br><br>
-<button> View Details </button>
+<i class="fa-solid fa-ruler-combined"></i> 2 Acres<br>
+<i class="fa-solid fa-location-dot"></i> Pune<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹74L<br>
+<button>View Details</button>
 </td>
-<td align="center" style="border:1px solid #ccc; padding:15px;">
-    <img src="p3.jpg" width="250"height="250"><br><br>
-    <b>Commercial Plot</b><br>
-    💰 ₹75L<br>
-    📏 2 Acres<br>
-    📍 Nashik<br><br>
-    <button> View Details </button>
-    </td>
-<td align="center" style="border:1px solid #ccc; padding:15px;">
-    <img src="p4.jpg" width="250"height="250"><br><br>
-    <b>Commercial Plot</b><br>
-    💰 ₹79L<br>
-    📏 2 Acres<br>
-    📍 Pune<br><br>
-    <button> View Details </button>
-    </td>
-<tr>
- <td align="center" style="border:1px solid #ccc; padding:15px;">
-    <img src="p5.jpg" width="250"height="250"><br><br>
-    <b>Commercial Plot</b><br>
-    💰 ₹75L<br>
-    📏 2 Acres<br>
-    📍 UP<br><br>
-    <button> View Details </button>
-    </td>
-    <td align="center" style="border:1px solid #ccc; padding:15px;">
-    <img src="p6.jpg" width="250"height="250"><br><br>
-    <b>Commercial Plot</b><br>
-    💰 ₹83L<br>
-    📏 2 Acres<br>
-    📍 Nagpur<br><br>
-    <button> View Details </button>
-    </td>
-    <td align="center" style="border:1px solid #ccc; padding:15px;">
-    <img src="p7.jpg" width="250"height="250"><br><br>
-    <b>Commercial Plot</b><br>
-    💰 ₹90L<br>
-    📏 4 Acres<br>
-    📍 Pune<br><br>
-    <button> View Details </button>
-    </td>
-    <td align="center" style="border:1px solid #ccc; padding:15px;">
-    <img src="p8.jpg" width="250"height="250"><br><br>
-    <b>Commercial Plot</b><br>
-    💰 ₹78L<br>
-    📏 5 Acres<br>
-    📍 Chandrapur<br><br>
-    <button> View Details </button>
-    </td>
+
+<td>
+<img src="p3.jpg"><br><br>
+<b>Investment Plot</b><br>
+<i class="fa-solid fa-ruler-combined"></i> 2 Acres<br>
+<i class="fa-solid fa-location-dot"></i> Nashik<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹75L<br>
+<button>View Details</button>
+</td>
+
+<td>
+<img src="p4.jpg"><br><br>
+<b>Premium Plot</b><br>
+<i class="fa-solid fa-ruler-combined"></i> 2 Acres<br>
+<i class="fa-solid fa-location-dot"></i> Pune<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹79L<br>
+<button>View Details</button>
+</td>
+
 </tr>
+
+<tr>
+
+<td>
+<img src="p5.jpg"><br><br>
+<b>Farm Land</b><br>
+<i class="fa-solid fa-ruler-combined"></i> 2 Acres<br>
+<i class="fa-solid fa-location-dot"></i> UP<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹75L<br>
+<button>View Details</button>
+</td>
+
+<td>
+<img src="p6.jpg"><br><br>
+<b>Residential Plot</b><br>
+<i class="fa-solid fa-ruler-combined"></i> 2 Acres<br>
+<i class="fa-solid fa-location-dot"></i> Nagpur<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹83L<br>
+<button>View Details</button>
+</td>
+
+<td>
+<img src="p7.jpg"><br><br>
+<b>Large Plot</b><br>
+<i class="fa-solid fa-ruler-combined"></i> 4 Acres<br>
+<i class="fa-solid fa-location-dot"></i> Pune<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹90L<br>
+<button>View Details</button>
+</td>
+
+<td>
+<img src="p8.jpg"><br><br>
+<b>Industrial Plot</b><br>
+<i class="fa-solid fa-ruler-combined"></i> 5 Acres<br>
+<i class="fa-solid fa-location-dot"></i> Chandrapur<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹78L<br>
+<button>View Details</button>
+</td>
+
+</tr>
+
 </table>
 
-<br><br>
-<center><a href="index.html">⬅ Back to Home</a></center>
+<div class="footer">
+<a href="index.html">⬅ Back to Home</a>
+</div>
 
 </body>
 </html>
