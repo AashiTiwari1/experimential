@@ -1,88 +1,179 @@
-
 <html>
 <head>
-    <title>Villa / House</title>
+<title>Villa / House</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(to right, lavender, ghostwhite);
+}
+
+.header{
+background:linear-gradient(to right, mediumpurple, slateblue);
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.title{
+text-align:center;
+color:purple;
+margin-top:20px;
+}
+
+.subtitle{
+text-align:center;
+color:gray;
+margin-bottom:20px;
+}
+
+.property-table{
+margin:auto;
+border-spacing:20px;
+}
+
+.property-table td{
+background:white;
+border-radius:10px;
+padding:12px;
+text-align:center;
+box-shadow:0 4px 12px gray;
+transition:0.3s;
+}
+
+.property-table td:hover{
+transform:scale(1.05);
+}
+
+.property-table img{
+width:240px;
+height:200px;
+border-radius:10px;
+}
+
+button{
+padding:8px 15px;
+border:none;
+border-radius:8px;
+background:mediumpurple;
+color:white;
+cursor:pointer;
+margin-top:8px;
+}
+
+button:hover{
+background:slateblue;
+}
+
+.footer{
+background:lavenderblush;
+margin:20px;
+padding:20px;
+text-align:center;
+}
+
+a{
+text-decoration:none;
+color:purple;
+font-weight:bold;
+}
+
+</style>
 </head>
 
-<body style="background-color:whitesmoke; margin:0; font-family:Arial;">
+<body>
 
-<div style="background-color:#6f42c1; color:white; padding:15px; text-align:center;">
-    <h2>🏙️ Skyline Properties</h2>
+<div class="header">
+<h2><i class="fa-solid fa-city"></i> Skyline Properties</h2>
+<p>Explore Luxury Living</p>
 </div>
 
-<center>
-    <h2 style="color:#6f42c1;">Villas & Houses</h2>
-    <p style="color:gray;">Luxury homes for you</p>
-</center>
+<h2 class="title">Villas & Houses</h2>
+<p class="subtitle">Premium homes for a better lifestyle</p>
 
-<table align="center" cellpadding="20">
+<table class="property-table">
 
 <tr>
-<td align="center" style="border:1px solid #ccc; padding:15px;">
-<img src="v1.png" width="300" height="300"><br><br>
+
+<td>
+<img src="v1.png"><br><br>
 <b>Luxury Villa</b><br>
-💰 ₹2 Cr<br>
-📍 Mumbai<br><br>
+<i class="fa-solid fa-location-dot"></i> Mumbai<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹2 Cr<br>
 <button>View Details</button>
 </td>
 
-<td align="center" style="border:1px solid #ccc; padding:15px;">
-<img src="v2.jpg" width="300"  height="300"><br><br>
+<td>
+<img src="v2.jpg"><br><br>
 <b>Modern House</b><br>
-💰 ₹1.5 Cr<br>
-📍 Pune<br><br>
+<i class="fa-solid fa-location-dot"></i> Pune<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹1.5 Cr<br>
 <button>View Details</button>
 </td>
 
-<td align="center" style="border:1px solid #ccc; padding:15px;">
-<img src="v3.jpg" width="300"  height="300"><br><br>
+<td>
+<img src="v3.jpg"><br><br>
 <b>Sea View Villa</b><br>
-💰 ₹2.5 Cr<br>
-📍 Bangalore<br><br>
+<i class="fa-solid fa-location-dot"></i> Bangalore<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹2.5 Cr<br>
 <button>View Details</button>
 </td>
-<td align="center" style="border:1px solid #ccc; padding:15px;">
-    <img src="v4.jpg" width="300"  height="300"><br><br>
-    <b>Duplex Villa</b><br>
-    💰 ₹2.8 Cr<br>
-    📍 Pune<br><br>
-    <button>View Details</button>
-    </td>
+
+<td>
+<img src="v4.jpg"><br><br>
+<b>Duplex Villa</b><br>
+<i class="fa-solid fa-location-dot"></i> Pune<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹2.8 Cr<br>
+<button>View Details</button>
+</td>
+
 </tr>
+
 <tr>
-    <td align="center" style="border:1px solid #ccc; padding:15px;">
-        <img src="v5.jpg" width="300"  height="300"><br><br>
-        <b>Smart Home Villa</b><br>
-        💰 ₹2.9 Cr<br>
-        📍 Bangalore<br><br>
-        <button>View Details</button>
-        </td>
-        <td align="center" style="border:1px solid #ccc; padding:15px;">
-            <img src="v6.jpg" width="300"  height="300"><br><br>
-            <b>Premium Villa</b><br>
-            💰 ₹2.8 Cr<br>
-            📍 Goa<br><br>
-            <button>View Details</button>
-            </td>
-            <td align="center" style="border:1px solid #ccc; padding:15px;">
-                <img src="v7.jpg" width="300 "  height="300"><br><br>
-                <b>Modern Villa</b><br>
-                💰 ₹2.5 Cr<br>
-                📍 Delhi<br><br>
-                <button>View Details</button>
-                </td>
-                <td align="center" style="border:1px solid #ccc; padding:15px;">
-                    <img src="v8.jpg" width="300"  height="300"><br><br>
-                    <b>Luxury Villa</b><br>
-                    💰 ₹2.5 Cr<br>
-                    📍 Bangalore<br><br>
-                    <button>View Details</button>
-                    </td>
+
+<td>
+<img src="v5.jpg"><br><br>
+<b>Smart Home Villa</b><br>
+<i class="fa-solid fa-location-dot"></i> Bangalore<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹2.9 Cr<br>
+<button>View Details</button>
+</td>
+
+<td>
+<img src="v6.jpg"><br><br>
+<b>Premium Villa</b><br>
+<i class="fa-solid fa-location-dot"></i> Goa<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹2.8 Cr<br>
+<button>View Details</button>
+</td>
+
+<td>
+<img src="v7.jpg"><br><br>
+<b>Modern Villa</b><br>
+<i class="fa-solid fa-location-dot"></i> Delhi<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹2.5 Cr<br>
+<button>View Details</button>
+</td>
+
+<td>
+<img src="v8.jpg"><br><br>
+<b>Luxury Residence</b><br>
+<i class="fa-solid fa-location-dot"></i> Bangalore<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹2.5 Cr<br>
+<button>View Details</button>
+</td>
+
 </tr>
+
 </table>
 
-<br><br>
-<center><a href="index.html">⬅ Back to Home</a></center>
+<div class="footer">
+<a href="index.html">⬅ Back to Home</a>
+</div>
 
 </body>
 </html>
