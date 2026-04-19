@@ -1,185 +1,328 @@
-
 <html>
 <head>
-    <title>Skyline Properties</title>
+<title>Skyline Properties</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background: linear-gradient(to right, lavender, ghostwhite);
+}
+
+.header{
+background: linear-gradient(to right, mediumpurple, slateblue);
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.search-box{
+text-align:center;
+margin:20px;
+}
+
+.search-box input{
+width:320px;
+padding:10px;
+border-radius:25px;
+border:1px solid gray;
+}
+
+.section-title{
+margin-left:20px;
+color:purple;
+font-size:24px;
+font-weight:bold;
+}
+
+.section-subtitle{
+margin-left:20px;
+color:gray;
+margin-bottom:10px;
+}
+
+.filter-box{
+text-align:center;
+margin:20px;
+}
+
+.filter-box select{
+padding:6px;
+border-radius:8px;
+}
+
+.filter-box button{
+padding:6px 12px;
+border-radius:8px;
+background:slateblue;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.property-table{
+margin:auto;
+border-spacing:20px;
+}
+
+.property-table td{
+background:white;
+border-radius:10px;
+padding:10px;
+text-align:center;
+transition:0.3s;
+box-shadow:0 4px 12px gray;
+}
+
+.property-table td:hover{
+transform:scale(1.05);
+}
+
+.property-table img{
+width:300px;
+height:200px;
+border-radius:10px;
+}
+
+.category{
+text-align:center;
+margin-top:40px;
+}
+
+.category h1{
+color:purple;
+}
+
+.category table{
+margin:auto;
+}
+
+.category td{
+text-align:center;
+vertical-align:middle;
+}
+
+.category a{
+text-decoration:none;
+color:black;
+display:inline-block;
+}
+
+.category img{
+display:block;
+margin:auto;
+width:160px;
+height:160px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.category img:hover{
+transform:scale(1.1);
+}
+
+.footer{
+background:lavenderblush;
+margin:30px;
+padding:20px;
+text-align:center;
+border-radius:10px;
+}
+
+.footer h3{
+color:purple;
+}
+
+</style>
 </head>
 
-<body style="margin:0; font-family:Arial; background:linear-gradient(to right,#f3f4f7,#e6e9f0);">
+<body>
 
-<div style="background:linear-gradient(to right,mediumpurple,slateblue); color:white; padding:20px; text-align:center;">
-    <h1 style="margin:0;">🏙️ Skyline Properties</h1>
-    <p style="margin:5px;">Find Your Dream Home</p>
+<div class="header">
+<h1><i class="fa-solid fa-city"></i> Skyline Properties</h1>
+<p>Find Your Dream Home</p>
 </div>
 
-
-<div style="text-align:center; margin:20px;">
-    <input type="text" placeholder="Search property..."
-    style="width:320px; padding:10px; border-radius:25px; border:1px solid gray;">
+<div class="search-box">
+<input type="text" placeholder="Search property...">
 </div>
 
-<h2 style="margin-left:20px; color:purple;">⭐ Featured Properties</h2>
-<p style="margin-left:20px; color:gray;">Handpicked properties for you</p>
-<fieldset>
+<h2>
+    <i class="fa-solid fa-star" style="color:gold;"></i> Featured Properties
+    </h2>
+<p class="section-subtitle">Handpicked properties for you</p>
 
-<div style="text-align:center; margin:20px;">
-    <b>Price:</b>
-    <select>
-        <option>All</option>
-        <option>Below ₹50L</option>
-        <option>₹50L - ₹1Cr</option>
-        <option>Above ₹1Cr</option>
-    </select>
+<div class="filter-box">
 
-    &nbsp;&nbsp;&nbsp;&nbsp;
+<b>Price:</b>
 
-    <b>BHK:</b>
-    <select>
-        <option>All</option>
-        <option>1 BHK</option>
-        <option>2 BHK</option>
-        <option>3 BHK</option>
-    </select>
+<select>
+<option>All</option>
+<option>Below ₹50L</option>
+<option>₹50L - ₹1Cr</option>
+<option>Above ₹1Cr</option>
+</select>
 
-    &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;
 
-    <button>Apply</button>
+<b>BHK:</b>
+
+<select>
+<option>All</option>
+<option>1 BHK</option>
+<option>2 BHK</option>
+<option>3 BHK</option>
+</select>
+
+&nbsp;&nbsp;
+
+<button>Apply</button>
+
 </div>
-</fieldset>
 
-<table align="center" cellpadding="20" height = "300">
+<table class="property-table">
+
 <tr>
-<td align="center">
-<img src="PP1.jpg" width="300" height = "300"><br>
+
+<td>
+<img src="PP1.jpg"><br>
 <b>Luxury Villa</b><br>
-📍 Mumbai<br>
-💰 ₹1.2 Cr
+<i class="fa-solid fa-location-dot"></i> Mumbai<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹1.2 Cr
 </td>
 
-<td align="center">
-<img src="PP2.png" width="300"  height = "300"><br>
-<b>Modern villa</b><br>
-📍 Pune<br>
-💰 ₹95L
+<td>
+<img src="PP2.png"><br>
+<b>Modern Villa</b><br>
+<i class="fa-solid fa-location-dot"></i> Pune<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹95L
 </td>
 
-<td align="center">
-<img src="pp3.jpg" width="300"  height = "300"><br>
+<td>
+<img src="pp3.jpg"><br>
 <b>Mansion</b><br>
-📍 Delhi<br>
-💰 ₹1.5 Cr
+<i class="fa-solid fa-location-dot"></i> Delhi<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹1.5 Cr
 </td>
 
-<td align="center">
-<img src="pp4.jpg" width="300"  height = "300"><br>
+<td>
+<img src="pp4.jpg"><br>
 <b>Mansion</b><br>
-📍 Bangalore<br>
-💰 ₹2 Cr
-</td>
-
-<td align="center">
-<img src="pp5.jpeg" width="300"  height = "300"><br>
-<b>Villa</b><br>
-📍 Hyderabad<br>
-💰 ₹1.1 Cr
+<i class="fa-solid fa-location-dot"></i> Bangalore<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹2 Cr
 </td>
 
 </tr>
+
 <tr>
-<td align="center">
-<img src="pp7.jpg" width="300"  height = "300"><br>
-<b>Mansion</b><br>
-📍 Jaipur<br>
-💰 ₹80L
+
+<td>
+<img src="pp5.jpeg"><br>
+<b>Villa</b><br>
+<i class="fa-solid fa-location-dot"></i> Hyderabad<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹1.1 Cr
 </td>
 
-<td align="center">
-<img src="pp8.jpg" width="300" height = "300"><br>
-<b>Elite Residency</b><br>
-📍 Ahmedabad<br>
-💰 ₹89L
+<td>
+<img src="pp7.jpg"><br>
+<b>Mansion</b><br>
+<i class="fa-solid fa-location-dot"></i> Jaipur<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹80L
 </td>
-<td align="center">
-    <img src="pp9.jpg" width="300" height = "300"><br>
-    <b>Residency</b><br>
-    📍 Ahmedabad<br>
-    💰 ₹85L
-    </td>
-    <td align="center">
-        <img src="pp10.jpg" width="300" height = "300"><br>
-        <b>Villa</b><br>
-        📍 Ahmedabad<br>
-        💰 ₹98L
-        </td>
-           <td align="center">
-                <img src="pp6.jpg" width="300" height = "300"><br>
-             <b>Elite Residency</b><br>
-                📍 Ahmedabad<br>
-                💰 ₹1.5 cr
-                </td>
+
+<td>
+<img src="pp8.jpg"><br>
+<b>Elite Residency</b><br>
+<i class="fa-solid fa-location-dot"></i> Ahmedabad<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹89L
+</td>
+
+<td>
+<img src="pp9.jpg"><br>
+<b>Residency</b><br>
+<i class="fa-solid fa-location-dot"></i> Ahmedabad<br>
+<i class="fa-solid fa-indian-rupee-sign"></i> ₹85L
+</td>
+
 </tr>
+
 </table>
 
-<br><br>
+<div class="category">
 
-
-<center>
-<h1 style="color:purple;">🏠 Browse Properties</h1>
+<h1><i class="fa-solid fa-house"></i> Browse Properties</h1>
 <p style="color:gray;">Explore properties by category</p>
 
-<br>
-
 <table cellpadding="30">
+
 <tr>
 
-<td align="center">
+<td>
 <a href="flat.html">
-<img src="flat.jpg" width="180"  height = "180"><br><br>
+<img src="flat.jpg"><br><br>
 Flats / Apartments
 </a>
 </td>
 
-<td align="center">
+<td>
 <a href="villa.html">
-<img src="villa.jpg" width="180"  height = "180"><br><br>
+<img src="villa.jpg"><br><br>
 Villa / House
 </a>
 </td>
 
-<td align="center">
+<td>
 <a href="shop.html">
-<img src="shop.jpg" width="180"  height = "180"><br><br>
+<img src="shop.jpg"><br><br>
 Shop / Showroom
 </a>
 </td>
 
-<td align="center">
+<td>
 <a href="office.html">
-<img src="office space.jpg" width="180"  height = "180"><br><br>
+<img src="office space.jpg"><br><br>
 Office Space
 </a>
 </td>
 
-<td align="center">
+<td>
 <a href="plot.html">
-<img src="land plot.jpg" width="180"  height = "180"><br><br>
+<img src="land plot.jpg"><br><br>
 Land / Plot
 </a>
 </td>
 
 </tr>
+
 </table>
-</center>
 
-<div style="background:white; margin:20px; padding:20px; text-align:center;">
-<h3 style="color:purple;">Why Choose Us</h3>
+</div>
 
-<p>✔ Verified Listings &nbsp;&nbsp; ✔ Best Prices &nbsp;&nbsp; ✔ Easy Process</p>
+<div class="footer">
+
+<h3>Why Choose Us</h3>
+
+<p>
+<i class="fa-solid fa-check"></i> Verified Listings
+&nbsp;&nbsp;
+<i class="fa-solid fa-tag"></i> Best Prices
+&nbsp;&nbsp;
+<i class="fa-solid fa-bolt"></i> Easy Process
+</p>
 
 <hr>
 
 <h3>Contact Us</h3>
-<p>Email: skyline@email.com</p>
-<p>Phone: +91 9876543210</p>
+
+<p><i class="fa-solid fa-envelope"></i> skyline@email.com</p>
+
+<p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+
+<p style="margin-top:10px;">© 2026 Skyline Properties</p>
+
 </div>
 
 </body>
