@@ -1,0 +1,196 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background: linear-gradient(to right, lavender, ghostwhite);
+    }
+    
+    .header{
+    background: linear-gradient(to right, mediumpurple, slateblue);
+    color:white;
+    padding:20px;
+    text-align:center;
+    }
+    
+    .search-box{
+    text-align:center;
+    margin:20px;
+    }
+    
+    .search-box input{
+    width:320px;
+    padding:10px;
+    border-radius:25px;
+    border:1px solid gray;
+    }
+    
+    .section-title{
+    margin-left:20px;
+    color:purple;
+    font-size:24px;
+    font-weight:bold;
+    }
+    
+    .section-subtitle{
+    margin-left:20px;
+    color:gray;
+    margin-bottom:20px;
+    }
+    
+    .filter-btn{
+    margin:20px;
+    }
+    
+    #sidebar{
+    position:fixed;
+    top:0;
+    left:-300px;
+    width:300px;
+    height:100%;
+    background: linear-gradient(to bottom, lavender, white);
+    box-shadow:0 0 15px gray;
+    padding:20px;
+    transition:0.4s;
+    z-index:1000;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    }
+    
+    #sidebar h4{
+    color:purple;
+    margin-bottom:15px;
+    }
+    
+    #sidebar label{
+    font-weight:bold;
+    margin-top:10px;
+    display:block;
+    color:slateblue;
+    }
+    
+    #sidebar select{
+    width:100%;
+    padding:8px;
+    border-radius:8px;
+    border:1px solid lightgray;
+    margin-bottom:10px;
+    }
+    
+    #sidebar button{
+    border-radius:8px;
+    }
+    
+    .property-table{
+    margin:auto;
+    border-spacing:30px;
+    }
+    
+    .property-table td{
+    background:white;
+    border-radius:12px;
+    padding:12px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 6px 15px lightgray;
+    width:250px;
+    }
+    
+    .property-table td:hover{
+    transform:scale(1.05);
+    }
+    
+    .property-table img{
+    width:100%;
+    height:180px;
+    border-radius:10px;
+    margin-bottom:10px;
+    }
+    
+    .fa-location-dot{
+    color:red;
+    }
+    
+    .fa-indian-rupee-sign{
+    color:green;
+    }
+    
+    .featured-title{
+    margin-left:20px;
+    margin-top:20px;
+    }
+    
+    .featured-title i{
+    color:gold;
+    }
+    
+    .category{
+    text-align:center;
+    margin-top:60px;
+    }
+    
+    .category h1{
+    color:purple;
+    margin-bottom:10px;
+    }
+    
+    .category p{
+    color:gray;
+    }
+    
+    .category table{
+    margin:auto;
+    }
+    
+    .category td{
+    text-align:center;
+    vertical-align:middle;
+    }
+    
+    .category a{
+    text-decoration:none;
+    color:black;
+    display:inline-block;
+    font-weight:bold;
+    }
+    
+    .category img{
+    display:block;
+    margin:auto;
+    width:160px;
+    height:160px;
+    border-radius:10px;
+    transition:0.3s;
+    }
+    
+    .category img:hover{
+    transform:scale(1.1);
+    }
+    
+    button{
+    padding:8px 15px;
+    border:none;
+    border-radius:8px;
+    background:mediumpurple;
+    color:white;
+    cursor:pointer;
+    margin-top:8px;
+    }
+    
+    button:hover{
+    background:slateblue;
+    }
+    
+    .footer{
+    background:lavenderblush;
+    margin:30px;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    }
+    
+    .footer h3{
+    color:purple;
+    }
+    
+    .footer i{
+    margin:0 5px;
+    }
