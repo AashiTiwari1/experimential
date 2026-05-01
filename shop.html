@@ -1,7 +1,9 @@
-
 <html>
 <head>
 <title>Shop / Showroom</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -34,7 +36,8 @@ margin-bottom:20px;
 
 .property-table{
 margin:auto;
-border-spacing:20px;
+border-collapse:separate;
+border-spacing:40px 30px;
 }
 
 .property-table td{
@@ -44,6 +47,7 @@ padding:12px;
 text-align:center;
 box-shadow:0 4px 12px gray;
 transition:0.3s;
+width:240px;
 }
 
 .property-table td:hover{
@@ -51,7 +55,7 @@ transform:scale(1.05);
 }
 
 .property-table img{
-width:240px;
+width:100%;
 height:200px;
 border-radius:10px;
 }
@@ -75,6 +79,7 @@ background:lavenderblush;
 margin:20px;
 padding:20px;
 text-align:center;
+border-radius:10px;
 }
 
 a{
@@ -88,6 +93,7 @@ font-weight:bold;
 
 <body>
 
+
 <div class="header">
 <h2><i class="fa-solid fa-city"></i> Skyline Properties</h2>
 <p>Find the Best Commercial Spaces</p>
@@ -96,6 +102,7 @@ font-weight:bold;
 <h2 class="title">Shops & Showrooms</h2>
 <p class="subtitle">Perfect spaces for your business</p>
 
+
 <table class="property-table">
 
 <tr>
@@ -103,37 +110,37 @@ font-weight:bold;
 <td>
 <img src="s1.jpg"><br><br>
 <b>Retail Shop</b><br>
-<i class="fa-solid fa-ruler-combined"></i> 600 sq ft<br>
-<i class="fa-solid fa-location-dot"></i> Mumbai<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹80L<br>
-<button>View Details</button>
+<i class="fa-solid fa-ruler-combined" style="color:purple;"></i> 600 sq ft<br>
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Mumbai<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹80L<br>
+<button onclick="showDetails('Retail Shop','Mumbai','₹80L','600 sq ft')">View Details</button>
 </td>
 
 <td>
 <img src="s2.jpg"><br><br>
 <b>Showroom Space</b><br>
-<i class="fa-solid fa-ruler-combined"></i> 700 sq ft<br>
-<i class="fa-solid fa-location-dot"></i> Pune<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹68L<br>
-<button>View Details</button>
+<i class="fa-solid fa-ruler-combined" style="color:purple;"></i> 700 sq ft<br>
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Pune<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹68L<br>
+<button onclick="showDetails('Showroom Space','Pune','₹68L','700 sq ft')">View Details</button>
 </td>
 
 <td>
 <img src="s3.jpg"><br><br>
 <b>Commercial Shop</b><br>
-<i class="fa-solid fa-ruler-combined"></i> 500 sq ft<br>
-<i class="fa-solid fa-location-dot"></i> Pune<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹79L<br>
-<button>View Details</button>
+<i class="fa-solid fa-ruler-combined" style="color:purple;"></i> 500 sq ft<br>
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Pune<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹79L<br>
+<button onclick="showDetails('Commercial Shop','Pune','₹79L','500 sq ft')">View Details</button>
 </td>
 
 <td>
 <img src="s4.jpg"><br><br>
 <b>Showroom Space</b><br>
-<i class="fa-solid fa-ruler-combined"></i> 600 sq ft<br>
-<i class="fa-solid fa-location-dot"></i> Nagpur<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹70L<br>
-<button>View Details</button>
+<i class="fa-solid fa-ruler-combined" style="color:purple;"></i> 600 sq ft<br>
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Nagpur<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹70L<br>
+<button onclick="showDetails('Showroom Space','Nagpur','₹70L','600 sq ft')">View Details</button>
 </td>
 
 </tr>
@@ -143,46 +150,84 @@ font-weight:bold;
 <td>
 <img src="s5.jpg"><br><br>
 <b>Compact Shop</b><br>
-<i class="fa-solid fa-ruler-combined"></i> 400 sq ft<br>
-<i class="fa-solid fa-location-dot"></i> Delhi<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹55L<br>
-<button>View Details</button>
+<i class="fa-solid fa-ruler-combined" style="color:purple;"></i> 400 sq ft<br>
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Delhi<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹55L<br>
+<button onclick="showDetails('Compact Shop','Delhi','₹55L','400 sq ft')">View Details</button>
 </td>
 
 <td>
 <img src="s6.jpg"><br><br>
 <b>Retail Outlet</b><br>
-<i class="fa-solid fa-ruler-combined"></i> 600 sq ft<br>
-<i class="fa-solid fa-location-dot"></i> Mumbai<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹89L<br>
-<button>View Details</button>
+<i class="fa-solid fa-ruler-combined" style="color:purple;"></i> 600 sq ft<br>
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Mumbai<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹89L<br>
+<button onclick="showDetails('Retail Outlet','Mumbai','₹89L','600 sq ft')">View Details</button>
 </td>
 
 <td>
 <img src="s7.jpg"><br><br>
 <b>Business Shop</b><br>
-<i class="fa-solid fa-ruler-combined"></i> 700 sq ft<br>
-<i class="fa-solid fa-location-dot"></i> Pune<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹90L<br>
-<button>View Details</button>
+<i class="fa-solid fa-ruler-combined" style="color:purple;"></i> 700 sq ft<br>
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Pune<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹90L<br>
+<button onclick="showDetails('Business Shop','Pune','₹90L','700 sq ft')">View Details</button>
 </td>
 
 <td>
 <img src="s8.jpg"><br><br>
 <b>Premium Showroom</b><br>
-<i class="fa-solid fa-ruler-combined"></i> 800 sq ft<br>
-<i class="fa-solid fa-location-dot"></i> Bangalore<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹79L<br>
-<button>View Details</button>
+<i class="fa-solid fa-ruler-combined" style="color:purple;"></i> 800 sq ft<br>
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Bangalore<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹79L<br>
+<button onclick="showDetails('Premium Showroom','Bangalore','₹79L','800 sq ft')">View Details</button>
 </td>
 
 </tr>
 
 </table>
 
+
+<div class="modal fade" id="propertyModal">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5 id="modalTitle"></h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body" id="modalBody"></div>
+
+</div>
+</div>
+</div>
+
+
 <div class="footer">
 <a href="index.html">⬅ Back to Home</a>
 </div>
+
+
+<script>
+
+function showDetails(name, location, price, area){
+
+document.getElementById("modalTitle").innerText = name;
+
+document.getElementById("modalBody").innerHTML =
+"📍 Location: " + location + "<br>" +
+"💰 Price: " + price + "<br>" +
+"📐 Area: " + area;
+
+var myModal = new bootstrap.Modal(document.getElementById('propertyModal'));
+myModal.show();
+
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
