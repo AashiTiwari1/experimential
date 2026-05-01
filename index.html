@@ -2,6 +2,8 @@
 <head>
 <title>Skyline Properties</title>
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -24,96 +26,85 @@ text-align:center;
 margin:20px;
 }
 
-.search-box input{
-width:320px;
-padding:10px;
-border-radius:25px;
-border:1px solid gray;
-}
 
-.section-title{
-margin-left:20px;
-color:purple;
-font-size:24px;
-font-weight:bold;
-}
-
-.section-subtitle{
-margin-left:20px;
-color:gray;
-margin-bottom:10px;
-}
-
-.filter-box{
-text-align:center;
-margin:20px;
-}
-
-.filter-box select{
-padding:6px;
-border-radius:8px;
-}
-
-.filter-box button{
-padding:6px 12px;
-border-radius:8px;
-background:slateblue;
+#sidebar{
+position:fixed;
+top:0;
+left:-300px;
+width:300px;
+height:100%;
+background: linear-gradient(to bottom, mediumpurple, slateblue);
 color:white;
+box-shadow:0 0 15px gray;
+padding:20px;
+transition:0.4s;
+z-index:1000;
+}
+
+#sidebar h4{
+color:white;
+}
+
+#sidebar label{
+margin-top:10px;
+display:block;
+}
+
+#sidebar select{
+width:100%;
+padding:8px;
+border-radius:8px;
 border:none;
-cursor:pointer;
+margin-bottom:15px;
+}
+
+#sidebar button{
+border:none;
 }
 
 .property-table{
 margin:auto;
-border-spacing:20px;
+border-collapse:separate;
+border-spacing:30px;
 }
 
 .property-table td{
 background:white;
-border-radius:10px;
-padding:10px;
+border-radius:12px;
+padding:12px;
 text-align:center;
 transition:0.3s;
-box-shadow:0 4px 12px gray;
+box-shadow:0 4px 15px lightgray;
+width:250px;
 }
 
 .property-table td:hover{
-transform:scale(1.05);
+transform:scale(1.06);
 }
 
 .property-table img{
-width:300px;
-height:200px;
+width:100%;
+height:180px;
 border-radius:10px;
+margin-bottom:8px;
 }
+
 
 .category{
 text-align:center;
-margin-top:40px;
+margin-top:60px;
 }
 
 .category h1{
 color:purple;
+margin-bottom:10px;
 }
 
 .category table{
 margin:auto;
 }
 
-.category td{
-text-align:center;
-vertical-align:middle;
-}
-
-.category a{
-text-decoration:none;
-color:black;
-display:inline-block;
-}
-
 .category img{
-display:block;
-margin:auto;
 width:160px;
 height:160px;
 border-radius:10px;
@@ -124,6 +115,7 @@ transition:0.3s;
 transform:scale(1.1);
 }
 
+
 .footer{
 background:lavenderblush;
 margin:30px;
@@ -132,124 +124,133 @@ text-align:center;
 border-radius:10px;
 }
 
-.footer h3{
-color:purple;
-}
-
 </style>
 </head>
 
 <body>
+
 
 <div class="header">
 <h1><i class="fa-solid fa-city"></i> Skyline Properties</h1>
 <p>Find Your Dream Home</p>
 </div>
 
+
+<button onclick="openSidebar()" class="btn btn-dark" style="margin:20px;">
+☰ Filters
+</button>
+
+
 <div class="search-box">
-<input type="text" placeholder="Search property...">
+<input type="text" id="search" placeholder="Search property..." onkeyup="searchProperty()"
+style="width:300px; padding:10px; border-radius:20px; border:1px solid gray;">
 </div>
 
-<h2>
-    <i class="fa-solid fa-star" style="color:gold;"></i> Featured Properties
-    </h2>
-<p class="section-subtitle">Handpicked properties for you</p>
 
-<div class="filter-box">
+<div id="sidebar">
 
-<b>Price:</b>
+<h4>Filters</h4>
 
-<select>
-<option>All</option>
-<option>Below ₹50L</option>
-<option>₹50L - ₹1Cr</option>
-<option>Above ₹1Cr</option>
+<label>Price</label>
+<select id="priceFilter">
+<option value="all">All</option>
+<option value="0.5">Below ₹50L</option>
+<option value="1">₹50L - ₹1Cr</option>
+<option value="above">Above ₹1Cr</option>
 </select>
 
-&nbsp;&nbsp;
-
-<b>BHK:</b>
-
-<select>
-<option>All</option>
-<option>1 BHK</option>
-<option>2 BHK</option>
-<option>3 BHK</option>
+<label>BHK</label>
+<select id="bhkFilter">
+<option value="all">All</option>
+<option value="2">2 BHK</option>
+<option value="3">3 BHK</option>
+<option value="4">4 BHK</option>
 </select>
 
-&nbsp;&nbsp;
+<button onclick="applyFilter()" class="btn btn-light w-100">Apply</button>
 
-<button>Apply</button>
+<br><br>
+
+<button onclick="closeSidebar()" class="btn btn-danger w-100">Close</button>
 
 </div>
+
+
+<h2 style="margin-left:25px; margin-top:10px;">
+<i class="fa-solid fa-star" style="color:gold;"></i> Featured Properties
+</h2>
+
 
 <table class="property-table">
 
 <tr>
 
-<td>
-<img src="PP1.jpg"><br>
+<td class="property" data-price="1.2" data-bhk="4">
+<img src="PP1.jpg">
 <b>Luxury Villa</b><br>
-<i class="fa-solid fa-location-dot"></i> Mumbai<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹1.2 Cr
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Mumbai<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹1.2 Cr
 </td>
 
-<td>
-<img src="PP2.png"><br>
+<td class="property" data-price="0.95" data-bhk="3">
+<img src="PP2.png">
 <b>Modern Villa</b><br>
-<i class="fa-solid fa-location-dot"></i> Pune<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹95L
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Pune<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹95L
 </td>
 
-<td>
-<img src="pp3.jpg"><br>
+<td class="property" data-price="1.5" data-bhk="4">
+<img src="pp3.jpg">
 <b>Mansion</b><br>
-<i class="fa-solid fa-location-dot"></i> Delhi<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹1.5 Cr
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Delhi<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹1.5 Cr
 </td>
 
-<td>
-<img src="pp4.jpg"><br>
+<td class="property" data-price="2" data-bhk="5">
+<img src="pp4.jpg">
 <b>Mansion</b><br>
-<i class="fa-solid fa-location-dot"></i> Bangalore<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹2 Cr
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Bangalore<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹2 Cr
 </td>
 
 </tr>
 
 <tr>
 
-<td>
-<img src="pp5.jpeg"><br>
+<td class="property" data-price="1.1" data-bhk="4">
+<img src="pp5.jpeg">
 <b>Villa</b><br>
-<i class="fa-solid fa-location-dot"></i> Hyderabad<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹1.1 Cr
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Hyderabad<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹1.1 Cr
 </td>
 
-<td>
-<img src="pp7.jpg"><br>
+<td class="property" data-price="0.8" data-bhk="3">
+<img src="pp7.jpg">
 <b>Mansion</b><br>
-<i class="fa-solid fa-location-dot"></i> Jaipur<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹80L
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Jaipur<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹80L
 </td>
 
-<td>
-<img src="pp8.jpg"><br>
+<td class="property" data-price="0.89" data-bhk="2">
+<img src="pp8.jpg">
 <b>Elite Residency</b><br>
-<i class="fa-solid fa-location-dot"></i> Ahmedabad<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹89L
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Ahmedabad<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹89L
 </td>
 
-<td>
-<img src="pp9.jpg"><br>
+<td class="property" data-price="0.85" data-bhk="2">
+<img src="pp9.jpg">
 <b>Residency</b><br>
-<i class="fa-solid fa-location-dot"></i> Ahmedabad<br>
-<i class="fa-solid fa-indian-rupee-sign"></i> ₹85L
+<i class="fa-solid fa-location-dot" style="color:red;"></i> Ahmedabad<br>
+<i class="fa-solid fa-indian-rupee-sign" style="color:green;"></i> ₹85L
 </td>
 
 </tr>
 
 </table>
+
+<br><br><br>
+
 
 <div class="category">
 
@@ -259,42 +260,11 @@ color:purple;
 <table cellpadding="30">
 
 <tr>
-
-<td>
-<a href="flat.html">
-<img src="flat.jpg"><br><br>
-Flats / Apartments
-</a>
-</td>
-
-<td>
-<a href="villa.html">
-<img src="villa.jpg"><br><br>
-Villa / House
-</a>
-</td>
-
-<td>
-<a href="shop.html">
-<img src="shop.jpg"><br><br>
-Shop / Showroom
-</a>
-</td>
-
-<td>
-<a href="office.html">
-<img src="office space.jpg"><br><br>
-Office Space
-</a>
-</td>
-
-<td>
-<a href="plot.html">
-<img src="land plot.jpg"><br><br>
-Land / Plot
-</a>
-</td>
-
+<td><a href="flat.html"><img src="flat.jpg"><br>Flats</a></td>
+<td><a href="villa.html"><img src="villa.jpg"><br>Villa</a></td>
+<td><a href="shop.html"><img src="shop.jpg"><br>Shop</a></td>
+<td><a href="office.html"><img src="office space.jpg"><br>Office</a></td>
+<td><a href="plot.html"><img src="land plot.jpg"><br>Plot</a></td>
 </tr>
 
 </table>
@@ -302,27 +272,70 @@ Land / Plot
 </div>
 
 <div class="footer">
-
 <h3>Why Choose Us</h3>
-
-<p>
-<i class="fa-solid fa-check"></i> Verified Listings
-&nbsp;&nbsp;
-<i class="fa-solid fa-tag"></i> Best Prices
-&nbsp;&nbsp;
-<i class="fa-solid fa-bolt"></i> Easy Process
-</p>
-
+<p>✔ Verified Listings | ✔ Best Prices | ✔ Easy Process</p>
 <hr>
-
-<h3>Contact Us</h3>
-
-<p><i class="fa-solid fa-envelope"></i> skyline@email.com</p>
-
-<p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
-
-
+<p>Email: skyline@email.com</p>
+<p>Phone: +91 9876543210</p>
 </div>
+
+<script>
+
+function openSidebar(){
+document.getElementById("sidebar").style.left = "0";
+}
+
+function closeSidebar(){
+document.getElementById("sidebar").style.left = "-300px";
+}
+
+function searchProperty(){
+let input = document.getElementById("search").value.toLowerCase();
+let items = document.getElementsByClassName("property");
+
+for(let i=0;i<items.length;i++){
+let text = items[i].innerText.toLowerCase();
+items[i].style.display = text.includes(input) ? "" : "none";
+}
+}
+
+function applyFilter(){
+
+let price = document.getElementById("priceFilter").value;
+let bhk = document.getElementById("bhkFilter").value;
+
+let properties = document.getElementsByClassName("property");
+
+for(let i=0;i<properties.length;i++){
+
+let p = parseFloat(properties[i].getAttribute("data-price"));
+let b = properties[i].getAttribute("data-bhk");
+
+let show = true;
+
+if(price !== "all"){
+if(price === "above"){
+if(p <= 1) show = false;
+}
+else if(price == "1"){
+if(p < 0.5 || p > 1) show = false;
+}
+else{
+if(p >= 0.5) show = false;
+}
+}
+
+if(bhk !== "all"){
+if(b != bhk) show = false;
+}
+
+properties[i].style.display = show ? "" : "none";
+}
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
